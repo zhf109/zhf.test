@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
+</head>
+<body >
+
+
+<!--导航栏-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+  <div class="container">
+  <!--  <div class="container-fluid">-->
+    <!-- 导航栏按钮位置   container-fluid  换平铺 -->
+    <!-- 品牌和折叠按钮 -->
+    <a class="navbar-brand" href="#">刷票系统</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent"
+      aria-expanded="false"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 导航内容 -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- 左侧导航链接 -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+<!--          <a class="nav-link active" href="#">用户管理</a>-->
+<!--&lt;!&ndash;            名称&ndash;&gt;-->
+<!--        </li>-->
+        <li class="nav-item">
+          <a class="nav-link" href="\order\list">订单管理</a>
+<!--            名称-->
+        </li>
+        <!-- 下拉菜单 -->
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+          >
+            {{get_real_name()}}     <!-- 名称 -->
+          </a>
+          <ul class="dropdown-menu">
+<!--            <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/login">注销</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- 右侧导航链接 -->
+      <ul class="navbar-nav ms-auto">
+        <!-- 下拉菜单 -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+          >
+            {{get_real_name()}}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+<!--            <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/login">注销</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!--    内容-->
+<div class="container">
+  {%block body%}
+  {%endblock%}
+</div>
+<!--去素材上拿一行代码class="container"把表格居中并且加构造-->
+
+<!--<script src="/static/jquery-3.7.1.min.map"></script>-->
+<!--<script src="/static/bootstrap-5.3.0-alpha1-dist"></script>-->
+
+<script src="/static/jquery-3.7.1.min.js"></script>
+<script src="/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!--#需要指向具体的 JS 文件路径，且 Bootstrap 5 需要使用包含 Popper 的 bundle 版本-->
+<script src="/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

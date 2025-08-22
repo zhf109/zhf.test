@@ -1,0 +1,35 @@
+{%extends 'layout.html' %}
+
+{% block body %}
+<!--面板-->
+  <div class="card">
+  <div class="card-body">
+    修改订单
+  </div>
+  <div class="card-footer">
+
+<form class="row row-cols-lg-auto g-3 align-items-center" method="post">
+        <!-- id输入框 -->
+  <div class="col-12 col-md-4">
+    <input type="number" class="form-control"  placeholder="请输入订单id" name="id"/>
+  </div>
+
+  <!-- URL 输入框 -->
+  <div class="col-12 col-md-5">
+    <input type="text" class="form-control" placeholder="请输入url" name="url"/>
+  </div>
+
+  <!-- 数量输入框 -->
+  <div class="col-12 col-md-4">
+    <input type="number" class="form-control"  placeholder="请输入数量" name="count"/>
+  </div>
+
+  <!-- 创建按钮 -->
+  <div class="col-md-1 d-flex align-items-end justify-content-end">
+    <button type="submit" class="btn btn-outline-secondary w-100">修改订单</button>
+  </div>
+</form>
+
+  </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{%extends 'layout.html' %}
+
+{% block body %}
+    <table class="table table-bordered">
+
+<div style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <a class="btn btn-info" href="/order/create">添加订单</a>
+    <a class="btn btn-danger" href="/order/delete">删除订单</a>
+    <a class="btn btn-success" href="/order/update">修改订单</a>
+    <a class="btn btn-secondary" href="/order/select">查询订单</a>
+</div>
+
+<!--        添加按钮-->
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>URL</th>
+                <th>数量</th>
+                <th>用户ID</th>
+                <th>状态</th>
+            </tr>
+        </thead>
+            <tbody>
+            {% for item in data_list %}
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.url}}</td>
+                    <td>{{item.count}}</td>
+                    <td>{{item.name}}</td>
+                    <td>
+                        <span class="badge text-bg-{{state_dict[item.state].cls
+                        }}">{{state_dict[item.state].text}}</span>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+    </table>
+{% endblock %}

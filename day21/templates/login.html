@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
+    <style>
+        .login-box{
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 450px;
+        border: 1px solid #ddd;
+        padding: 0 30px 30px 30px ;
+
+        }
+        .login-box h2{
+        text-align:center;
+        }
+        .deng{
+          color: white;
+          border: none;
+          cursor: pointer;
+          /* 如果使用margin方案 */
+          margin-top: 24px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="login-box">
+    <h2>用户登录</h2>
+<form method="POST" action="/login">
+    <select name="role" class="form-control">
+        <option value="1"> 客户 </option>
+        <option value="2"> 管理员 </option>
+    </select>
+  <div class="form-group">
+    <label >手机号</label>
+    <input type="text" class="form-control" placeholder="手机号" name="mobile">
+  </div>
+  <div class="form-group">
+    <label >密码</label>
+    <input type="password"  class="form-control"   placeholder="密码" name="pwd">
+  </div>
+
+<div class="deng" style="text-align: center;">
+  <input type="submit" class="btn btn-info" value="登录">
+</div>
+
+
+    <span style="color:red;">{{error}}</span>
+</form>
+</div>
+
+
+
+
+<!--<form method="POST" action="/login">-->
+<!--    <select name="role">-->
+<!--        <option value="1"> 客户 </option>-->
+<!--        <option value="2"> 管理员 </option>-->
+<!--    </select>-->
+<!--    <input type="text" name="mobile" placeholder="手机号">-->
+<!--    <input type="password" name="pwd" placeholder="密码">-->
+<!--    <input type="submit" value="提交">-->
+<!--    <span style="color:red;">{{error}}</span>-->
+
+<!--    <script src="/static/jquery-3.7.1.min.map"></script>-->
+<!--    <script src="/static/bootstrap-5.3.0-alpha1-dist"></script>-->
+
+<!--</form>-->
+
+    <script src="/static/jquery-3.7.1.min.map"></script>
+    <script src="/static/bootstrap-5.3.0-alpha1-dist"></script>
+
+</body>
+</html>
